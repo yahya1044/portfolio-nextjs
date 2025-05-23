@@ -1,6 +1,6 @@
 "use client";
 import styled, { ThemeProvider } from "styled-components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import { darkTheme, lightTheme } from "@/utils/Themes";
 import HeroSection from "@/components/HeroSection";
@@ -10,6 +10,7 @@ import Skills from "@/components/Skills";
 import Footer from "@/components/Footer";
 import ProjectDetails from "@/components/ProjectDetails";
 import Projects from "@/components/Projects";
+import LoaderSpinner from "@/components/loading/LoadingComponent";
 // import Contact from "@/components/Contact";
 
 const Body = styled.div`
@@ -36,26 +37,42 @@ const Wrapper = styled.div`
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
+  const [loading, setLoading] = useState(true); // Loading state
+
   console.log(openModal);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000); // Adjust time as needed
+    return () => clearTimeout(timer); // Cleanup timer
+  }, []);
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Navbar />
-      <Body>
-        <HeroSection />
-        <Wrapper>
-          <Skills />
-          <Experience />
-        </Wrapper>
-        <Projects openModal={openModal} setOpenModal={setOpenModal} />
-        <Wrapper>
-          <Education />
-          {/* <Contact /> */}
-        </Wrapper>
-        <Footer />
-        {openModal.state && (
-          <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
-        )}
-      </Body>
-    </ThemeProvider>
+    <>
+      {loading ? (
+        <LoaderSpinner showLoader /> // Show spinner while loading
+      ) : (
+        <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+          <Navbar />
+          <Body>
+            <HeroSection />
+            <Wrapper>
+              <Skills />
+              <Experience />
+            </Wrapper>
+            <Projects openModal={openModal} setOpenModal={setOpenModal} />
+            <Wrapper>
+              <Education />
+              {/* <Contact /> */}
+            </Wrapper>
+            <Footer />
+            {openModal.state && (
+              <ProjectDetails
+                openModal={openModal}
+                setOpenModal={setOpenModal}
+              />
+            )}
+          </Body>
+        </ThemeProvider>
+      )}
+    </>
   );
 }

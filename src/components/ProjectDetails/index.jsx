@@ -2,7 +2,10 @@ import { CloseRounded, GitHub, LinkedIn } from "@mui/icons-material";
 import { Modal } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 const Container = styled.div`
   width: 100%;
   height: 100%;
@@ -198,7 +201,8 @@ const index = ({ openModal, setOpenModal }) => {
             }}
             onClick={() => setOpenModal({ state: false, project: null })}
           />
-          <Image src={project?.image} />
+          <SwiperSlider />
+          {/* <Image src={project?.image} /> */}
           <Title>{project?.title}</Title>
           <Date>{project.date}</Date>
           <Tags>
@@ -247,6 +251,22 @@ const index = ({ openModal, setOpenModal }) => {
         </Wrapper>
       </Container>
     </Modal>
+  );
+};
+
+const SwiperSlider = () => {
+  return (
+    <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+      <SwiperSlide>Slide 1</SwiperSlide>
+      <SwiperSlide>Slide 2</SwiperSlide>
+      <SwiperSlide>Slide 3</SwiperSlide>
+      <SwiperSlide>Slide 4</SwiperSlide>
+      <SwiperSlide>Slide 5</SwiperSlide>
+      <SwiperSlide>Slide 6</SwiperSlide>
+      <SwiperSlide>Slide 7</SwiperSlide>
+      <SwiperSlide>Slide 8</SwiperSlide>
+      <SwiperSlide>Slide 9</SwiperSlide>
+    </Swiper>
   );
 };
 

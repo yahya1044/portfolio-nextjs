@@ -1,13 +1,14 @@
 export const Bio = {
   name: "Muhammad Yahya",
   roles: [
-    "Mern Stack Web Dev",
-    "Next Js Web Dev",
-    "React Native Developer",
-    "Programmer | Developer",
+    "Front-End Developer",
+    "Next.js & React Developer",
+    "Vue & Nuxt Developer",
+    "Mobile Application Developer",
+    "Quasar Expert, React Native, Ionic",
   ],
   description:
-    "11I am a motivated and versatile individual with a strong commitment to self-learning, consistently eager to embrace new challenges. Fueled by a passion for continuous learning, I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am poised to make a meaningful contribution and achieve exceptional outcomes",
+    "I am a motivated and versatile individual with a strong commitment to self-learning, consistently eager to embrace new challenges. Fueled by a passion for continuous learning, I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am poised to make a meaningful contribution and achieve exceptional outcomes",
   github: "https://github.com/yahya1044/",
   resume:
     "https://drive.google.com/file/d/10Czs7xwSifr-NJh8T2cYuhyEMy4jmJQ8/view?usp=sharing",
@@ -296,7 +297,7 @@ export const projects = [
       "Express Js",
     ],
     category: "web app",
-    github: "https://github.com/JawadProgrammer/Mern-Stack-Shopito",
+    github: "",
     webapp: "https://soormachinery.com/en/home",
   },
   {
@@ -307,7 +308,7 @@ export const projects = [
     image: "/images/tegment/1.png",
     tags: ["Next Js", "Tailwind CSS", "Framer Motion"],
     category: "web app",
-    github: "https://github.com/JawadProgrammer/React-Admins-Dashboard-1",
+    github: "",
     webapp: "https://vaionex-gaming.vercel.app/",
   },
   {

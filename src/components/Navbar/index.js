@@ -29,7 +29,7 @@ const Navbar = () => {
               display: "flex",
               alignItems: "center",
               color: "white",
-              marginBottom: "20;",
+              marginBottom: "20",
               cursor: "pointer",
             }}
           >
