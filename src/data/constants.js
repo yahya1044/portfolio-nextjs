@@ -376,6 +376,7 @@ export const projects = [
 
 export const TimeLineData = [
   { year: 2019, text: "Start My Journy" },
+  { year: 2019, text: "Start My Journy" },
   { year: 2020, text: "Shared my projects with the world" },
   { year: 2022, text: "Join Texinity Technologies as a Intern" },
   {
