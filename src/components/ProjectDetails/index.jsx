@@ -1,3 +1,4 @@
+"use client";
 import { CloseRounded, GitHub, LinkedIn } from "@mui/icons-material";
 import { Modal } from "@mui/material";
 import React from "react";
@@ -28,7 +29,7 @@ const Wrapper = styled.div`
   height: min-content;
   background-color: ${({ theme }) => theme.card};
   color: ${({ theme }) => theme.text_primary};
-  padding: 20px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -201,13 +202,13 @@ const index = ({ openModal, setOpenModal }) => {
             }}
             onClick={() => setOpenModal({ state: false, project: null })}
           />
-          <SwiperSlider />
+          <SwiperSlider data={project?.images} />
           {/* <Image src={project?.image} /> */}
           <Title>{project?.title}</Title>
           <Date>{project.date}</Date>
           <Tags>
-            {project?.tags.map((tag) => (
-              <Tag>{tag}</Tag>
+            {project?.tags.map((tag, index) => (
+              <Tag key={index}>{tag}</Tag>
             ))}
           </Tags>
           <Desc>{project?.description}</Desc>
@@ -254,18 +255,15 @@ const index = ({ openModal, setOpenModal }) => {
   );
 };
 
-const SwiperSlider = () => {
+const SwiperSlider = ({ data }) => {
+  console.log("🚀 ~ SwiperSlider ~ images:", data);
   return (
     <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      <SwiperSlide>Slide 5</SwiperSlide>
-      <SwiperSlide>Slide 6</SwiperSlide>
-      <SwiperSlide>Slide 7</SwiperSlide>
-      <SwiperSlide>Slide 8</SwiperSlide>
-      <SwiperSlide>Slide 9</SwiperSlide>
+      {data?.map((item, index) => (
+        <SwiperSlide key={index}>
+          <Image src={item} className="h-[400px]" />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };

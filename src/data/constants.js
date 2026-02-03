@@ -4,7 +4,7 @@ export const Bio = {
     "Front-End Developer",
     "Next.js & React Developer",
     "Vue & Nuxt Developer",
-    "Mobile Application Developer",
+    "Mobile App. Developer",
     "Quasar Expert, React Native, Ionic",
   ],
   description:
@@ -249,10 +249,37 @@ export const education = [
 export const projects = [
   {
     id: 9,
+    title: "OMMS - Orgvistra(Organization Management System)",
+    description:
+      "OMMS (Organization Management System), a comprehensive platform designed to streamline the management of organizations. The system enables organization owners to register members, verify details, and manage memberships. It also facilitates self-registration, event invitations, reminders, and notifications. The system is distributed under a single domain, with each organization assigned a unique URL. I implemented key features and user-friendly interfaces using ReactJS, Material-UI, React TanStack Query, and Redux Toolkit. Integrated REST APIs for efficient data exchange and ensured optimal performance. Focused on delivering scalable, maintainable solutions that enhanced user experience and organizational efficiency.",
+    thumbnail: "/images/omms/1.png",
+    images: [
+      "/images/omms/1.png",
+      "/images/omms/2.png",
+      "/images/omms/3.png",
+      "/images/omms/4.png",
+      "/images/omms/5.png",
+      "/images/omms/6.png",
+      "/images/omms/7.png",
+      "/images/omms/8.png",
+      "/images/omms/9.png",
+      "/images/omms/10.png",
+    ],
+    tags: ["Next Js", "Tailwind Css", "Meterial UI", "Python"],
+    category: "web app",
+    github: "",
+    webapp: "#",
+  },
+  {
+    id: 9,
     title: "Sell Any Source Code",
     description:
       "A platform where users can effortlessly sell their website or mobile app source code. Showcase your projects, connect with potential buyers, and turn your code into profit with secure transactions and a streamlined selling process.",
-    image: "/images/sellanysoucecode/1.png",
+    thumbnail: "/images/sellanysoucecode/1.png",
+    images: [
+      "/images/sellanysoucecode/1.png",
+      "/images/sellanysoucecode/2.png",
+    ],
     tags: ["Next Js", "Tailwind Css", "Meterial UI", "Python"],
     category: "web app",
     github: "",
@@ -264,7 +291,8 @@ export const projects = [
     title: "Shipper Store",
     description:
       "Shipper Store is your one-stop platform for sourcing high-quality e-commerce solutions tailored to streamline your business. We specialize in offering comprehensive logistics software, supply chain management tools, and shipping solutions to help businesses grow efficiently.",
-    image: "/images/shipperstore/1.png",
+    thumbnail: "/images/shipperstore/1.png",
+    images: ["/images/shipperstore/1.png"],
     tags: ["Vue Js", "Bootstarp", "Chart Js", "Java", "Stripe"],
     category: "web app",
     github: "",
@@ -276,7 +304,8 @@ export const projects = [
     title: "Bootstrap Responsive Landing Page",
     description:
       "Project description. - Convert Figma Design into a responsive Landing Page- Technology used: HTML, CSS, Bootstrap, Chart Js, Swiper Slider",
-    image: "/images/elix/1.png",
+    thumbnail: "/images/elix/1.png",
+    images: ["/images/elix/1.png"],
     tags: ["HTML", "CSS", "Bootstrap", "Swiper Slider", "Chart Js"],
     category: "web app",
     github: "",
@@ -287,7 +316,8 @@ export const projects = [
     id: 9,
     title: "Soor Machinery",
     description: "Ecommerce web app with stripe payment integration",
-    image: "/images/soormachinery/1.png",
+    thumbnail: "/images/soormachinery/1.png",
+    images: ["/images/soormachinery/1.png"],
     tags: [
       "React Js",
       "CSS",
@@ -305,7 +335,8 @@ export const projects = [
     title: "Next Js Gaming Landing Page",
     description:
       "Create admin panel using React Js, SCSS, Nivo Charts & Full Calender ",
-    image: "/images/tegment/1.png",
+    thumbnail: "/images/tegment/1.png",
+    images: ["/images/tegment/1.png"],
     tags: ["Next Js", "Tailwind CSS", "Framer Motion"],
     category: "web app",
     github: "",
@@ -316,7 +347,8 @@ export const projects = [
     title: "Edu Jobs",
     description:
       "Your Future in Education Awaits Embark on a rewarding educational career, from classroom teaching to district office roles ",
-    image: "/images/edujobs/1.png",
+    thumbnail: "/images/edujobs/1.png",
+    images: ["/images/edujobs/1.png"],
     tags: ["Nuxt Js", "Tailwind CSS", "Laravel", "Stripe"],
     category: "web app",
     github: "",
@@ -327,7 +359,8 @@ export const projects = [
     title: "Grim Scientific Web App",
     description:
       "Create admin panel using React Js, SCSS, Nivo Charts & Full Calender ",
-    image: "/images/grimm/1.png",
+    thumbnail: "/images/grimm/1.png",
+    images: ["/images/grimm/1.png", "/images/grimm/2.png"],
     tags: [
       "Nuxt Js",
       "Tailwind CSS",
