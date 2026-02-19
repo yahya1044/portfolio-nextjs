@@ -56,7 +56,7 @@ const HeroSection = () => {
           </HeroLeftContainer>
 
           <HeroRightContainer id="Right">
-            <Img src={"/images/profile.webp"} alt="hero-image" />
+            <Img src={"/images/profile.png"} alt="hero-image" />
           </HeroRightContainer>
         </HeroInnerContainer>
       </HeroContainer>
